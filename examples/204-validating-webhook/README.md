@@ -1,6 +1,6 @@
 # Example with validating hooks
 
-This is a simple example of `kubernetesValidating` binding. Read more information in [VALIDATING.md](../../VALIDATING.md).
+This is a simple example of `kubernetesValidating` binding. Read more information in [BINDING_VALIDATING.md](../../BINDING_VALIDATING.md).
 
 The example contains one hook that is used to validate custom resource [CronTab](https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/) on create or update (see also [105-crd-example](../105-crd-example/README.md). The hook enforces a simple policy: it is forbidden to create a CronTab resource with "image" not from private repository "repo.example.com".
 
@@ -14,7 +14,7 @@ An HTTP server behind the ValidatingWebhookConfiguration requires a certificate 
 ./gen-certs.sh
 ```
 
-> Note: `gen-certs.sh` requires [cfssl utility](https://github.com/cloudflare/cfssl/releases/latest) and an [Approval Permission](https://kubernetes.io/docs/tasks/tls/managing-tls-in-a-cluster) in cluster.
+> Note: `gen-certs.sh` requires [cfssl utility](https://github.com/cloudflare/cfssl/releases/latest).
 
 ### Build and install example
 
